@@ -159,16 +159,33 @@ section {
 #about {
     background: url(./img/bg-oca.png) no-repeat center/cover;
     background-attachment: fixed;
+    position: relative;
+    padding: 40px 20px;
+}  
+
+
+.chi-siamo {
+    font-family: 'Great Vibes', serif;
+    font-size: clamp(0.5rem, 9vw, 30rem);
+    color: var(--second);
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    margin: 0;
 }
 
-.container-about {
-    height: 300px;
-    width: 400px;
-    border: var(--terracotta);
+.about-div {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: clamp(280px, 40vw, 600px);
+    height: clamp(240px, 25vw, 500px);
     border-radius: 30px;
-    background: #B47541;
-    background: linear-gradient(159deg, rgba(180, 117, 65, 1) 38%, rgba(161, 142, 124, 1) 100%);
+    background: var(--second);
+    padding: 1.5rem;
 }
+
+
 
  /* CAROSELLO */
 
@@ -245,4 +262,12 @@ section {
     /* CONTINUA DA QUI */
     /* aggiungi pochi effetti per mobile */
 
+    .about-div {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
 }

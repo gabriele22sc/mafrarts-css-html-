@@ -23,7 +23,9 @@ body {
     background-position: center;
 }
 
-
+h1,h3,p {
+    font-family: 'Montserrat', serif;
+}
 /*  NAVBAR  */
 
 .header {
@@ -168,7 +170,6 @@ section {
 
 
 .chi-siamo {
-    font-family: 'Montserrat', serif;
     font-size: clamp(0.5rem, 9vw, 30rem);
     color: var(--second);
     position: absolute;
@@ -182,39 +183,6 @@ section {
          2px  2px 0 var(--primary);
 }
 
-.verticalShow {
-    animation: text-appear 0.8s both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 60%;
-}
-
-@keyframes text-appear {
-    from {
-        opacity: 0;
-        transform: translateY(300px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.horizontalShow {
-    animation: div-appear 0.8s both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 40%;
-}
-
-@keyframes div-appear {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 .about-div {
     position: absolute;
@@ -230,7 +198,6 @@ section {
 }
 
 .about-content h3 {
-    font-family: 'Montserrat', sans-serif;
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 800;
     color: var(--primary);
@@ -239,23 +206,110 @@ section {
 }
 
 .about-content p {
-    font-family: 'Montserrat', sans-serif;
     font-size: clamp(0.5rem, 5vw, 1.05rem);
     line-height: 1.6;
     color: var(--sabbia);
 }
 
-/*  CREATIONS  */
+
+    /*     CREATIONS     */
 .creazioni {
+    min-height: 420px;
+    padding: 2rem 5%;
+}
+
+/*------ CAPI PERSONALIZZATI ------*/
+.product1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.product1 h1 {
+    font-size: clamp(1.7rem, 7vw + 1rem, 10rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 12%;
+}
+.product1 h3 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 10%;
+}
+.product1 p {
     margin: 0;
-    height: 100vh;
+    font-size: clamp(0.7rem, 5vw, 1rem);
+    color: var(--sabbia);
+    line-height: 1.6;
+}
+.card-scroller {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10%;
+    perspective: 1200px;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+}
+
+.card {
+    width: min(950px, 80%);
+    height: 580px;
+    border-radius: 24px;
+    border: 4px solid var(--primary);
+    background-color: var(--second);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: sticky;
+    overflow: hidden;
+    top: calc(var(--i) * 40px);
+    animation: stack 1s linear both;
+    animation-timeline: --cards;
+    animation-range: entry 0% exit 50%;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#card1 {
+    --i: 1;
+}
+#card2 {
+    --i: 2;
+}
+#card3 {
+    --i: 3;
+}
+#card4 {
+    --i: 4;
+}
+@keyframes stack {
+    0% {
+        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
+    }
+    35% {
+        transform: translateY(100px) translateZ(-200px) rotateX(8deg) scale(0.92);
+    }
+    70% {
+        transform: translateY(20px) translateZ(-120px) rotateX(2deg) scale(0.95);
+    }
+    80% {
+        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
+    }
 }
 
 
-
  /* CAROSELLO */
-
+ 
 /* CARD AUTO SCROLLER */
+
 
 /* FOOTER */
 
@@ -320,17 +374,20 @@ section {
         margin: 1.5rem 0;
         text-align: center;
         transform: translateY(-50px);
+        color: var(--primary);
         opacity: 0;
         transition: .3s ease;
     }
-
+    
     #check:checked~.navbar a {
         transform: translateY(0);
         opacity: 1;
         transition-delay: calc(0.15s * var(--i));
     }
 
-    /*   ABOUT US   */
+
+/*----- ABOUT US -----*/
+
     #about {
         background: url(./img/oca-bg-mobile.png) no-repeat;
         background-position: center;
@@ -354,5 +411,91 @@ section {
         margin-top: 2rem;
         background: var(--second);
         border: 2px solid var(--primary);
+    }
+
+/*----- CREAZIONI -----*/
+
+    .product1 h1 {
+        margin-top: 35%;
+    }
+    .product1 p {
+        text-align: center;
+    }
+    .product1 h3 {
+        font-size: clamp(0.5rem, 5vw, 2rem);
+    }
+    .card-scroller {
+        margin-top: 0;
+    }
+}
+
+
+/* ------- EFFETTI -------*/
+.verticalShow {
+    animation: text-appear 0.8s both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60%;
+}
+
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.horizontalShow {
+    animation: div-appear 0.8s both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+@keyframes div-appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.imageReveal {
+    animation: imageReveal both;
+    animation-timeline: view(50% 10%);
+}
+
+@keyframes imageReveal {
+    from {
+        filter: saturate(0) contrast(4) brightness(0.1) blur(5px);
+        opacity: 0;
+        scale: 0.95;
+        translate: 0 4rem;
+    }
+    to {
+        filter: none;
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
+}
+
+.fadeUp {
+    animation: fadeUp both;
+    animation-timeline: view(50% 10%);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }

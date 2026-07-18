@@ -16,6 +16,12 @@
     box-sizing: border-box;
 }
 
+html {
+/* effetto per il click su elementi a che riportano alle section */
+  scroll-behavior: smooth;
+}
+
+
 body {
     min-height: 100vh;
     background: var(--second);
@@ -25,6 +31,18 @@ body {
 
 h1,h3,p {
     font-family: 'Montserrat', serif;
+}
+
+/*  stile per le section  */
+section {
+    min-height: 100vh;
+    display: flex;
+    padding: 2rem;
+}
+
+section[id] {
+/* evita che la navbar fissi la sezione */
+  scroll-margin-top: 50px; 
 }
 /*  NAVBAR  */
 
@@ -107,30 +125,27 @@ h1,h3,p {
 }
 
 
-/*  stile per le section  */
-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
 
 
 
 /*  HOME  */
 
+#home {
+    align-items: center;
+    justify-content: center;
+}
+
 .title {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     text-align: center;
 }
 
 .title h1 {
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 0.15vh;
     letter-spacing: 0.3vh;
     font-family: 'Great Vibes', serif;
@@ -181,6 +196,7 @@ section {
          2px -2px 0 var(--primary),
         -2px  2px 0 var(--primary),
          2px  2px 0 var(--primary);
+         animation: textappear both;
 }
 
 
@@ -213,10 +229,128 @@ section {
 
 
     /*     CREATIONS     */
-.creazioni {
-    min-height: 420px;
-    padding: 2rem 5%;
+
+
+/*------ CREATIONS LAYOUT ------*/
+#creazioni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
+
+#creazioni h1 {
+    font-size: clamp(1.7rem, 7vw, 10rem);
+    font-weight: 800;
+    white-space: nowrap;
+    color: var(--primary);
+    text-align: center;
+}
+
+.sottotitolo {
+    font-size: clamp(0.7rem, 7vw, 1.5rem);
+    color: var(--sabbia);
+}
+#creazioni .container-creazioni {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.container-creazioni .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 0.5rem; */
+    height: clamp(220px, 24vw, 260px);
+    width: 100%;
+    padding: 1.5rem;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 0 var(--sabbia);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container-creazioni .card h3 {
+    color: var(--primary);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    margin: 0;
+}
+.container-creazioni .card p {
+    color: var(--sabbia);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.container-creazioni .card:nth-child(3n+1) {
+    transform: rotate(-0.6deg);
+}
+
+.container-creazioni .card:nth-child(3n+2) {
+    transform: rotate(0.4deg);
+}
+
+.container-creazioni .card:nth-child(3n) {
+    transform: rotate(-0.3deg);
+}
+
+.container-creazioni .card:hover {
+    transform: translateY(-4px) rotate(0deg);
+    box-shadow: 7px 7px 0 0 var(--primary);
+}
+
+
+.icon {
+    width: clamp(0.3rem, 7vw, 2rem); 
+    height: auto;
+    color: var(--third);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin-bottom: 0.1rem;
+    flex-shrink: 0;
+}
+
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    padding: 0.5rem 0.75rem;
+    width: fit-content;
+}
+.link-arrow:hover {
+    background: var(--primary);
+    color: var(--second);
+}
+.link-arrow span {
+  display: inline-block;
+  font-family: system-ui, -apple-system, sans-serif; /* Font pulito per simboli */
+  transition: transform 0.2s ease; /* Rende il movimento fluido */
+}
+
+/* Effetto al passaggio del mouse: la freccia si sposta a destra */
+.link-arrow:hover span {
+    color: var(--second);
+  transform: translateX(4px);
+}
+
+
+
+
+
+
 
 /*------ CAPI PERSONALIZZATI ------*/
 .product1 {
@@ -227,7 +361,7 @@ section {
     gap: 1.2rem;
 }
 .product1 h1 {
-    font-size: clamp(1.7rem, 7vw + 1rem, 10rem);
+    font-size: clamp(1.7rem, 7vw, 10rem);
     font-weight: 800;
     color: var(--primary);
     margin-top: 12%;
@@ -244,7 +378,7 @@ section {
     color: var(--sabbia);
     line-height: 1.6;
 }
-.card-scroller {
+.product1 .card-scroller {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -257,7 +391,7 @@ section {
     view-timeline-axis: block;
 }
 
-.card {
+.card-scroller .card {
     width: min(950px, 80%);
     height: 580px;
     border-radius: 24px;
@@ -273,21 +407,21 @@ section {
     animation-timeline: --cards;
     animation-range: entry 0% exit 50%;
 }
-.card img {
+.card-scroller .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-#card1 {
+.card-scroller #card1 {
     --i: 1;
 }
-#card2 {
+.card-scroller #card2 {
     --i: 2;
 }
-#card3 {
+.card-scroller #card3 {
     --i: 3;
 }
-#card4 {
+.card-scroller #card4 {
     --i: 4;
 }
 @keyframes stack {
@@ -304,6 +438,9 @@ section {
         transform: translateY(0) translateZ(0) rotateX(0) scale(1);
     }
 }
+
+
+
 
 
  /* CAROSELLO */
@@ -330,6 +467,9 @@ section {
         background: var(--second);
         padding: 2.5rem 1.5rem 1.5rem 1.5rem; 
         border: 2px solid var(--verde-senape);
+    }
+    #creazioni .container-creazioni {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
 }
 
@@ -392,31 +532,66 @@ section {
         background: url(./img/oca-bg-mobile.png) no-repeat;
         background-position: center;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem 1rem 3rem;
     }
 
     .chi-siamo {
+        position: static;
         font-family: 'Montserrat', serif;
-        font-size: clamp(3rem, 9vw, 10rem);
+        font-size: clamp(2.2rem, 10vw, 12rem);
         color: var(--second);
-        position: absolute;
-        top: 15%;
-        left: 10%;
+        text-align: center;
+        margin-top: 30%;
+        margin-bottom: 1.5rem;
+        text-shadow: 
+        -2px -2px 0 var(--primary),  
+         2px -2px 0 var(--primary),
+        -2px  2px 0 var(--primary),
+         2px  2px 0 var(--primary);
+         animation: textappear both;
     }
+
     .about-div {
         position: static;
-        width: 100%;
-        max-width: 100%;
-        aspect-ratio: auto;
+        width: min(100%, 520px);
         height: auto;
-        margin-top: 2rem;
-        background: var(--second);
+        margin-top: 20%;
+        padding: 1.5rem;
+        background: rgba(241, 234, 209, 0.95);
         border: 2px solid var(--primary);
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
 /*----- CREAZIONI -----*/
+    #creazioni {
+        padding: 1.2rem;
+    }
 
+    #creazioni .container-creazioni {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    #creazioni .container-creazioni .card {
+        height: clamp(220px, 42vw, 320px);
+        width: min(100%, clamp(240px, 80vw, 360px));
+        justify-self: center;
+    }
+    #creazioni h1 {
+        margin-top: 20%;
+    }
+
+/*----- VESTITI RICAMATI A MANO -----*/
+  
     .product1 h1 {
+        font-size: clamp(2rem, 7vw, 5rem);
         margin-top: 35%;
+        white-space: nowrap;
     }
     .product1 p {
         text-align: center;
@@ -431,8 +606,20 @@ section {
 
 
 /* ------- EFFETTI -------*/
+
+ /* permette all'utente di spegnere gli effetti */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *, *::before, *::after{
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+
 .verticalShow {
-    animation: text-appear 0.8s both;
+    animation: text-appear both;
     animation-timeline: view();
     animation-range: entry 20% cover 60%;
 }
@@ -448,13 +635,13 @@ section {
     }
 }
 
-.horizontalShow {
-    animation: div-appear 0.8s both;
+.horizontalShowFromleft {
+    animation: div-appear-sx both;
     animation-timeline: view();
     animation-range: entry 20% cover 40%;
 }
 
-@keyframes div-appear {
+@keyframes div-appear-sx {
     from {
         opacity: 0;
         transform: translateX(-100px);
@@ -464,6 +651,24 @@ section {
         transform: translateX(0);
     }
 }
+
+.horizontalShowFromright {
+    animation: div-appear-dx both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+@keyframes div-appear-dx {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .imageReveal {
     animation: imageReveal both;
     animation-timeline: view(50% 10%);

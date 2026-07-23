@@ -62,7 +62,7 @@
                 <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 44V32a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v12"/><path d="M6 44h36"/><path d="M14 30v-6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6"/><path d="M18 22v-5"/><path d="M30 22v-5"/><path d="M24 12v5"/><path d="M24 6c-1.6 2-1.6 3.6 0 5.6C25.6 9.6 25.6 8 24 6Z"/></svg>
                 <h3>Torte scenografiche</h3>
                 <p>Dolci pensati su misura per rendere unico ogni momento speciale, con decorazioni interamente realizzate a mano.</p>
-                <a href="#torte-scenografiche" class="link-arrow">Vedi le torte <span aria-hidden="true">→</span></a>
+                <a href="#torte-personalizzate" class="link-arrow">Vedi le torte <span aria-hidden="true">→</span></a>
             </div>
             <div class="card imageReveal">
                 <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="24" r="7"/><path d="M23 24h19"/><path d="M35 24v6"/><path d="M41 24v6"/></svg>
@@ -120,14 +120,14 @@
     <div id="vestiti-ricamati">
         <div class="product1">
             <h1>Vestiti ricamati a mano</h1>
+            <h3>Ricami - Toppe - Embroidery</h3>
+            <p>Ogni capo è pensato per essere unico, comodo e pieno di personalità.</p>
             <div class="card-scroller">
                 <div class="card" id="card1"><img src="./img/capi-personalizzati/felpa-a1.png" alt=""></div>
                 <div class="card" id="card2"><img src="./img/capi-personalizzati/felpa-a2.png" alt=""></div>
                 <div class="card" id="card3"><img src="./img/capi-personalizzati/felpa-g1.png" alt=""></div>
                 <div class="card" id="card4"><img src="./img/capi-personalizzati/felpa-g2.png" alt=""></div>
             </div>
-            <h3>Ricami - Toppe - Embroidery</h3>
-            <p>Ogni capo è pensato per essere unico, comodo e pieno di personalità.</p>
         </div>
     </div>
 
@@ -135,19 +135,60 @@
     <!-- TORTE PERSONALIZZATE -->
     <section id="torte-personalizzate">
         <div class="container-torte">
-            <div class="card-torte" id="t-1">
-                
-            </div>
+            
+            <div class="cont">
 
-            <div class="card-torte" id="t-2">
+                <input type="radio" name="torte" id="t-1">
+                <input type="radio" name="torte" id="t-2" checked>
+                <input type="radio" name="torte" id="t-3">
                 
-            </div>
+                <div class="immagini">
+                    <label for="t-1" class="card-torte" id="card-1"></label>
+                    <label for="t-2" class="card-torte" id="card-2"></label>
+                    <label for="t-3" class="card-torte" id="card-3"></label>
+                </div>
 
-            <div class="card-torte" id="t-3">
-                
+                <div class="slider">
+                    <label for="t-1" class="dot"></label>
+                    <label for="t-2" class="dot"></label>
+                    <label for="t-3" class="dot"></label>
+                </div>
             </div>
             
-            <h1>Torte decorative</h1>
+            <div class="descrizione-torte">
+                <h1>Torte decorative</h1>
+                <p>Crea la tua torta decorativa per qualsiasi tipo di evento</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="portachiavi">
+        <div class="container-portachiavi">
+            
+            <div class="cont">
+
+                <input type="radio" name="portachiavi" id="p-1">
+                <input type="radio" name="portachiavi" id="p-2" checked>
+                <input type="radio" name="portachiavi" id="p-3">
+                
+                <div class="immagini">
+                    <label for="p-1" class="card-portachiavi" id="card-p1"></label>
+                    <label for="p-2" class="card-portachiavi" id="card-p2"></label>
+                    <label for="p-3" class="card-portachiavi" id="card-p3"></label>
+                </div>
+
+                <div class="slider">
+                    <label for="p-1" class="dot"></label>
+                    <label for="p-2" class="dot"></label>
+                    <label for="p-3" class="dot"></label>
+                </div>
+            </div>
+            
+            <div class="descrizione-portachiavi">
+                <h1>Portachiavi</h1>
+                <p>Personalizziamo e stiamo accanto a te in ogni momento</p>
+            </div>
         </div>
 
     </section>

@@ -367,7 +367,7 @@ section[id] {
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 800;
     color: var(--primary);
-    margin-top: 10%;
+    /* margin-top: 10%; */
 }
 .product1 p {
     margin: 0;
@@ -440,45 +440,253 @@ section[id] {
 /*------ TORTE PERSONALIZZATE ------*/
 
 #torte-personalizzate {
+    margin-top: 20%;
     align-items: center;
     justify-content: center;
 }
 
 .container-torte {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 7vw, 10rem);
+    width: min(100%, 1100px);
 }
 
-.container-torte .card-torte {
-    height: 400px;
-    width: 250px;
-    border-radius: 30px;
+.container-torte h1 {
+    font-size: clamp(1.7rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+}
+.container-torte p {
+    font-size: clamp(0.7, 5vw, 3rem);
+    color: var(--sabbia);
+    text-align: center;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: min(100%, 30rem);
+}
+
+.immagini {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(100%, 28rem);
+    overflow: hidden;
+}
+
+.card-torte {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: mostra-torta 9s infinite;
+}
+
+.descrizione-torte {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.card-torte:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.card-torte:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.card-torte:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+.cont > input[type="radio"] {
+    display: none;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(0.45rem, 1.2vw, 0.75rem);
+    width: 100%;
+}
+
+.slider .dot {
+    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
+    height: clamp(0.5rem, 1.2vw, 0.7rem);
+    border-radius: 999px;
     background-color: var(--sabbia);
-    transition: transform 1s;
+    cursor: pointer;
+    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
+    animation: mostra-punto 9s infinite;
 }
 
-.card-torte#t-1 {
+.slider .dot:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.slider .dot:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.slider .dot:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+#card-1 {
     background-image: url(./img/torte-decorative/torta-cresima.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
-.card-torte#t-2 {
+
+#card-2 {
     background-image: url(./img/torte-decorative/torta-dottoressa.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
-.card-torte#t-3 {
+
+#card-3 {
     background-image: url(./img/torte-decorative/torta-raniero.png);
+}
+
+
+/*      PORTACHIAVI        */
+#portachiavi {
+    margin-top: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-portachiavi {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 7vw, 10rem);
+    width: min(100%, 1100px);
+}
+
+.container-portachiavi h1 {
+    font-size: clamp(1.7rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+}
+.container-portachiavi p {
+    font-size: clamp(0.7, 5vw, 3rem);
+    color: var(--sabbia);
+    text-align: center;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: min(100%, 30rem);
+}
+
+.immagini {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(100%, 28rem);
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+
+.card-portachiavi {
+    position: absolute;
+    inset: 0;
+    display: block;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-radius: 40px;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: mostra-torta 9s infinite;
 }
-.card-torte#t-1:hover, .card-torte#t-2:hover, .card-torte#t-3:hover {
-    transform: scale(1.1);
+
+.descrizione-portachiavi {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 5vw, 2.5rem);
 }
- /* CAROSELLO */
+
+.card-portachiavi:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.card-portachiavi:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.card-portachiavi:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+.cont > input[type="radio"] {
+    display: none;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(0.45rem, 1.2vw, 0.75rem);
+    width: 100%;
+}
+
+.slider .dot {
+    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
+    height: clamp(0.5rem, 1.2vw, 0.7rem);
+    border-radius: 999px;
+    background-color: var(--sabbia);
+    cursor: pointer;
+    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
+    animation: mostra-punto 9s infinite;
+}
+
+.slider .dot:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.slider .dot:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.slider .dot:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+#card-p1 {
+    background-image: url(./img/portachiave/portachiavi1.png);
+}
+
+#card-p2 {
+    background-image: url(./img/portachiave/portachiavi2.png);
+}
+
+#card-p3 {
+    background-image: url(./img/portachiave/portachiavi3.png);
+}
+
+
+
+
+/* CAROSELLO */
  
 /* CARD AUTO SCROLLER */
 
@@ -487,7 +695,8 @@ section[id] {
 
 
 
-/* IPAD */
+/*      IPAD        */
+
 @media (max-width: 992px) {
     .header {
         padding: 1.3rem 5%;
@@ -506,9 +715,16 @@ section[id] {
     #creazioni .container-creazioni {
         grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
+
+    /*------ TORTE PERSONALIZZATE ------*/
+    .descrizione-torte {
+        gap: clamp(1rem, 5vw, 2rem);
+    }
+
 }
 
-/* telefono */
+/*      MOBILE      */
+
 @media (max-width: 768px) {
     .icons {
         display: inline-flex;
@@ -632,10 +848,45 @@ section[id] {
         text-align: center;
     }
     .product1 h3 {
+        margin: 0;
         font-size: clamp(0.5rem, 5vw, 2rem);
     }
     .card-scroller {
         margin-top: 0;
+    }
+
+/* TORTE DECORATIVE */
+
+    .container-torte {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1.25rem;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .container-torte h1 {
+        margin-bottom: 0;
+    }
+
+    .immagini {
+        order: 1;
+        width: min(100%, 22rem);
+    }
+
+    .slider {
+        order: 2;
+        gap: 0.5rem;
+    }
+
+    /* PORTACHIAVI */
+    .container-portachiavi{
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 
@@ -737,5 +988,42 @@ section[id] {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes mostra-torta {
+    /* 1. Nascosta / Inizio */
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.8);
+        z-index: 0;
+    }
+
+    /* 2. Completamente Visibile (Fade-in completato intorno al 5%) */
+    5%, 28% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 1;
+    }
+
+    /* 3. Dissolvenza in uscita fluida (dal 28% al 33.333%) */
+    33.333% {
+        opacity: 0;
+        transform: scale(0.8);
+        z-index: 0;
+    }
+}
+
+@keyframes mostra-punto {
+    0%, 33.333%, 100% {
+        background-color: var(--sabbia);
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    1%, 32.333% {
+        background-color: var(--primary);
+        transform: scale(1.25);
+        box-shadow: 0 0 0 4px rgba(24, 194, 123, 0.2);
     }
 }

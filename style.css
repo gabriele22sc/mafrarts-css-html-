@@ -228,10 +228,9 @@ section[id] {
 }
 
 
-    /*     CREATIONS     */
-
-
 /*------ CREATIONS LAYOUT ------*/
+
+
 #creazioni {
     display: flex;
     flex-direction: column;
@@ -336,11 +335,10 @@ section[id] {
 }
 .link-arrow span {
   display: inline-block;
-  font-family: system-ui, -apple-system, sans-serif; /* Font pulito per simboli */
-  transition: transform 0.2s ease; /* Rende il movimento fluido */
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: transform 0.2s ease;
 }
 
-/* Effetto al passaggio del mouse: la freccia si sposta a destra */
 .link-arrow:hover span {
     color: var(--second);
   transform: translateX(4px);
@@ -349,10 +347,9 @@ section[id] {
 
 
 
-
-
-
 /*------ CAPI PERSONALIZZATI ------*/
+
+
 .product1 {
     width: 100%;
     display: flex;
@@ -440,9 +437,47 @@ section[id] {
 }
 
 
+/*------ TORTE PERSONALIZZATE ------*/
 
+#torte-personalizzate {
+    align-items: center;
+    justify-content: center;
+}
 
+.container-torte {
+    display: flex;
+    flex-direction: row;
+}
 
+.container-torte .card-torte {
+    height: 400px;
+    width: 250px;
+    border-radius: 30px;
+    background-color: var(--sabbia);
+    transition: transform 1s;
+}
+
+.card-torte#t-1 {
+    background-image: url(./img/torte-decorative/torta-cresima.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card-torte#t-2 {
+    background-image: url(./img/torte-decorative/torta-dottoressa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card-torte#t-3 {
+    background-image: url(./img/torte-decorative/torta-raniero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card-torte#t-1:hover, .card-torte#t-2:hover, .card-torte#t-3:hover {
+    transform: scale(1.1);
+}
  /* CAROSELLO */
  
 /* CARD AUTO SCROLLER */

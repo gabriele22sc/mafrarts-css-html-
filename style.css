@@ -351,55 +351,65 @@ section[id] {
 
 
 .product1 {
-    width: 100%;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    /* gap: clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(1rem, 3vw, 2rem); */
+}
+.product1 h1 {
+    text-align: center;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--primary);
+}
+.product1 h3 {
+    text-align: center;
+    font-size: clamp(1.1rem, 2.4vw, 2rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 105%;
+}
+.product1 p {
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: var(--sabbia);
+    line-height: 1.6;
+    margin-top: 0;
+}
+.testo-card {
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
-}
-.product1 h1 {
-    font-size: clamp(1.7rem, 7vw, 10rem);
-    font-weight: 800;
-    color: var(--primary);
-    margin-top: 12%;
-}
-.product1 h3 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-    /* margin-top: 10%; */
-}
-.product1 p {
-    margin: 0;
-    font-size: clamp(0.7rem, 5vw, 1rem);
-    color: var(--sabbia);
-    line-height: 1.6;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
 }
 .product1 .card-scroller {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 10%;
+    width: min(100%, clamp(18rem, 70vw, 30rem));
+    margin: 0 auto;
     perspective: 1200px;
     view-timeline-name: --cards;
     view-timeline-axis: block;
 }
 
 .card-scroller .card {
-    width: min(950px, 80%);
-    height: 580px;
-    border-radius: 24px;
-    border: 4px solid var(--primary);
+    width: min(100%, clamp(16rem, 66vw, 24rem));
+    height: clamp(20rem, 55vw, 30rem);
+    border-radius: clamp(1rem, 2vw, 1.5rem);
+    border: 0.25rem solid var(--primary);
     background-color: var(--second);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: sticky;
     overflow: hidden;
-    top: calc(var(--i) * 40px);
+    top: calc(var(--i) * clamp(0.8rem, 2.5vw, 2.5rem));
     animation: stack 1s linear both;
     animation-timeline: --cards;
     animation-range: entry 0% exit 50%;
@@ -560,14 +570,14 @@ section[id] {
 }
 
 
-/*      PORTACHIAVI        */
-#portachiavi {
+/*      BORSE,POCHETTE E ALTRO        */
+#borse {
     margin-top: 20%;
     align-items: center;
     justify-content: center;
 }
 
-.container-portachiavi {
+.container-borse {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -576,13 +586,13 @@ section[id] {
     width: min(100%, 1100px);
 }
 
-.container-portachiavi h1 {
+.container-borse h1 {
     font-size: clamp(1.7rem, 5vw, 3rem);
     font-weight: 800;
     color: var(--primary);
     text-align: center;
 }
-.container-portachiavi p {
+.container-borse p {
     font-size: clamp(0.7, 5vw, 3rem);
     color: var(--sabbia);
     text-align: center;
@@ -605,7 +615,7 @@ section[id] {
     overflow: hidden;
 }
 
-.card-portachiavi {
+.card-borse {
     position: absolute;
     inset: 0;
     display: block;
@@ -618,21 +628,21 @@ section[id] {
     animation: mostra-torta 9s infinite;
 }
 
-.descrizione-portachiavi {
+.descrizione-borse {
     display: flex;
     flex-direction: column;
     gap: clamp(1.5rem, 5vw, 2.5rem);
 }
 
-.card-portachiavi:nth-of-type(1) {
+.card-borse:nth-of-type(1) {
     animation-delay: 0s;
 }
 
-.card-portachiavi:nth-of-type(2) {
+.card-borse:nth-of-type(2) {
     animation-delay: 3s;
 }
 
-.card-portachiavi:nth-of-type(3) {
+.card-borse:nth-of-type(3) {
     animation-delay: 6s;
 }
 
@@ -671,15 +681,15 @@ section[id] {
     animation-delay: 6s;
 }
 
-#card-p1 {
+#card-b1 {
     background-image: url(./img/portachiave/portachiavi1.png);
 }
 
-#card-p2 {
+#card-b2 {
     background-image: url(./img/portachiave/portachiavi2.png);
 }
 
-#card-p3 {
+#card-b3 {
     background-image: url(./img/portachiave/portachiavi3.png);
 }
 
@@ -715,6 +725,9 @@ section[id] {
     #creazioni .container-creazioni {
         grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
+
+    /*------ RICAMI ------*/
+
 
     /*------ TORTE PERSONALIZZATE ------*/
     .descrizione-torte {
@@ -837,22 +850,58 @@ section[id] {
         margin-top: 20%;
     }
 
+
 /*----- VESTITI RICAMATI A MANO -----*/
-  
-    .product1 h1 {
-        font-size: clamp(2rem, 7vw, 5rem);
-        margin-top: 35%;
-        white-space: nowrap;
+
+    .product1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(1rem, 3vw, 1.5rem);
+        padding: clamp(1rem, 2vw, 1.5rem);
     }
-    .product1 p {
+    .product1 h1 {
+        margin-top: 0;
         text-align: center;
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        font-weight: 800;
+        color: var(--primary);
     }
     .product1 h3 {
-        margin: 0;
-        font-size: clamp(0.5rem, 5vw, 2rem);
-    }
-    .card-scroller {
         margin-top: 0;
+        text-align: center;
+        font-size: clamp(1rem, 4vw, 1.6rem);
+        font-weight: 800;
+        color: var(--primary);
+    }
+    .product1 p {
+        margin-top: 0;
+        text-align: center;
+        font-size: clamp(0.9rem, 3.2vw, 1rem);
+        color: var(--sabbia);
+        line-height: 1.6;
+    }
+
+    .testo-card {
+        margin-top: 20%;
+        width: min(100%, 32rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product1 .card-scroller {
+        width: min(100%, clamp(18rem, 90vw, 26rem));
+        margin: 0;
+    }
+
+    .card-scroller .card {
+        width: min(100%, clamp(16rem, 85vw, 24rem));
+        height: clamp(20rem, 85vw, 45rem);
+        border-radius: clamp(1rem, 2vw, 1.5rem);
+        border: 0.25rem solid var(--primary);
+        top: calc(var(--i) * clamp(0.8rem, 2.5vw, 2rem));
     }
 
 /* TORTE DECORATIVE */
@@ -883,8 +932,8 @@ section[id] {
         gap: 0.5rem;
     }
 
-    /* PORTACHIAVI */
-    .container-portachiavi{
+    /* BORSE, POCHETTE E ALTRO */
+    .container-borse{
         display: flex;
         flex-direction: column-reverse;
     }

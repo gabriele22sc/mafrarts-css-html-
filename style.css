@@ -334,122 +334,23 @@ section[id] {
     color: var(--second);
 }
 .link-arrow span {
-  display: inline-block;
-  font-family: system-ui, -apple-system, sans-serif;
-  transition: transform 0.2s ease;
+    display: inline-block;
+    font-family: system-ui, -apple-system, sans-serif;
+    transition: transform 0.2s ease;
 }
 
 .link-arrow:hover span {
     color: var(--second);
-  transform: translateX(4px);
+    transform: translateX(4px);
 }
 
 
 
 
-/*------ CAPI PERSONALIZZATI ------*/
-
-
-.product1 {
-    width: min(100%, 1200px);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
-    /* gap: clamp(1.5rem, 4vw, 3rem);
-    padding: clamp(1rem, 3vw, 2rem); */
-}
-.product1 h1 {
-    text-align: center;
-    font-size: clamp(1.7rem, 4vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-}
-.product1 h3 {
-    text-align: center;
-    font-size: clamp(1.1rem, 2.4vw, 2rem);
-    font-weight: 800;
-    color: var(--primary);
-    margin-top: 105%;
-}
-.product1 p {
-    text-align: center;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
-    color: var(--sabbia);
-    line-height: 1.6;
-    margin-top: 0;
-}
-.testo-card {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(0.75rem, 2vw, 1.25rem);
-}
-.product1 .card-scroller {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: min(100%, clamp(18rem, 70vw, 30rem));
-    margin: 0 auto;
-    perspective: 1200px;
-    view-timeline-name: --cards;
-    view-timeline-axis: block;
-}
-
-.card-scroller .card {
-    width: min(100%, clamp(16rem, 66vw, 24rem));
-    height: clamp(20rem, 55vw, 30rem);
-    border-radius: clamp(1rem, 2vw, 1.5rem);
-    border: 0.25rem solid var(--primary);
-    background-color: var(--second);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: sticky;
-    overflow: hidden;
-    top: calc(var(--i) * clamp(0.8rem, 2.5vw, 2.5rem));
-    animation: stack 1s linear both;
-    animation-timeline: --cards;
-    animation-range: entry 0% exit 50%;
-}
-.card-scroller .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card-scroller #card1 {
-    --i: 1;
-}
-.card-scroller #card2 {
-    --i: 2;
-}
-.card-scroller #card3 {
-    --i: 3;
-}
-.card-scroller #card4 {
-    --i: 4;
-}
-@keyframes stack {
-    0% {
-        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
-    }
-    35% {
-        transform: translateY(100px) translateZ(-200px) rotateX(8deg) scale(0.92);
-    }
-    70% {
-        transform: translateY(20px) translateZ(-120px) rotateX(2deg) scale(0.95);
-    }
-    80% {
-        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
-    }
-}
-
-
-/*------ TORTE PERSONALIZZATE ------*/
+/*------ TORTE DECORATIVE ------*/
 
 #torte-personalizzate {
+    margin-right: 10%;
     margin-top: 20%;
     align-items: center;
     justify-content: center;
@@ -480,20 +381,24 @@ section[id] {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    width: min(100%, 30rem);
+    width: 100%;
 }
 
-.immagini {
+.immagini-torte {
     position: relative;
     display: grid;
     place-items: center;
-    width: min(100%, 28rem);
+    width: min(100%, 24rem);
+    aspect-ratio: 3 / 4;
     overflow: hidden;
+    border-radius: 40px;
 }
 
 .card-torte {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
@@ -570,6 +475,8 @@ section[id] {
 }
 
 
+
+
 /*      BORSE,POCHETTE E ALTRO        */
 #borse {
     margin-top: 20%;
@@ -598,26 +505,29 @@ section[id] {
     text-align: center;
 }
 
-.cont {
+.cont-borse {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    width: min(100%, 30rem);
+    width: 100%;
 }
 
-.immagini {
+.immagini-borse {
     position: relative;
     display: grid;
     place-items: center;
     width: min(100%, 28rem);
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
+    border-radius: 40px;
 }
 
 .card-borse {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
@@ -646,11 +556,11 @@ section[id] {
     animation-delay: 6s;
 }
 
-.cont > input[type="radio"] {
+.cont-borse > input[type="radio"] {
     display: none;
 }
 
-.slider {
+.slider-borse {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -659,7 +569,7 @@ section[id] {
     width: 100%;
 }
 
-.slider .dot {
+.slider-borse .dot-b {
     flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
     height: clamp(0.5rem, 1.2vw, 0.7rem);
     border-radius: 999px;
@@ -669,36 +579,394 @@ section[id] {
     animation: mostra-punto 9s infinite;
 }
 
-.slider .dot:nth-of-type(1) {
+.slider-borse .dot-b:nth-of-type(1) {
     animation-delay: 0s;
 }
 
-.slider .dot:nth-of-type(2) {
+.slider-borse .dot-b:nth-of-type(2) {
     animation-delay: 3s;
 }
 
-.slider .dot:nth-of-type(3) {
+.slider-borse .dot-b:nth-of-type(3) {
     animation-delay: 6s;
 }
 
 #card-b1 {
-    background-image: url(./img/portachiave/portachiavi1.png);
+    background-image: url(./img/borse-pochette-altro/borsa1.jpeg);
 }
 
 #card-b2 {
-    background-image: url(./img/portachiave/portachiavi2.png);
+    background-image: url(./img/borse-pochette-altro/borsa2.jpeg);
 }
 
 #card-b3 {
-    background-image: url(./img/portachiave/portachiavi3.png);
+    background-image: url(./img/borse-pochette-altro/pochette5.jpeg);
 }
 
 
+
+/*------ CAPI PERSONALIZZATI ------*/
+
+#vestiti-ricamati {
+    margin-top: 20%;
+}
+
+.product1 {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    /* gap: clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(1rem, 3vw, 2rem); */
+}
+.product1 h1 {
+    text-align: center;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--primary);
+}
+.product1 h3 {
+    text-align: center;
+    font-size: clamp(1.1rem, 2.4vw, 2rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 105%;
+}
+.product1 p {
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: var(--sabbia);
+    line-height: 1.6;
+    margin-top: 0;
+}
+.testo-card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+.product1 .card-scroller {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: min(100%, clamp(18rem, 70vw, 30rem));
+    margin: 0 auto;
+    perspective: 1200px;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+}
+
+.card-scroller .card {
+    width: min(100%, clamp(16rem, 66vw, 24rem));
+    height: clamp(24rem, 80vw, 36rem);
+    border-radius: clamp(1rem, 2vw, 1.5rem);
+    border: 0.25rem solid var(--primary);
+    background-color: var(--second);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: sticky;
+    overflow: hidden;
+    top: calc(var(--i) * clamp(0.8rem, 2.5vw, 2.5rem));
+    animation: stack 1s linear both;
+    animation-timeline: --cards;
+    animation-range: entry 0% exit 50%;
+}
+.card-scroller .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-scroller #card1 {
+    --i: 1;
+}
+.card-scroller #card2 {
+    --i: 2;
+}
+.card-scroller #card3 {
+    --i: 3;
+}
+.card-scroller #card4 {
+    --i: 4;
+}
+@keyframes stack {
+    0% {
+        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
+    }
+    35% {
+        transform: translateY(100px) translateZ(-200px) rotateX(8deg) scale(0.92);
+    }
+    70% {
+        transform: translateY(20px) translateZ(-120px) rotateX(2deg) scale(0.95);
+    }
+    80% {
+        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
+    }
+}
+
+
+/* BIGLIETTO D'AUGURI */
+
+
+#biglietto-auguri {
+    margin-top: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-biglietti {
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container-biglietti h1 {
+    font-size: clamp(1.7rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+}
+.container-biglietti p {
+    font-size: clamp(0.7, 5vw, 3rem);
+    color: var(--sabbia);
+    text-align: center;
+}
+
+.cont-biglietti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.immagini-biglietti {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(100%, 28rem);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.card-biglietti {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: mostra-torta 9s infinite;
+}
+
+.descrizione-biglietti {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.card-biglietti:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.card-biglietti:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.card-biglietti:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+.cont-biglietti > input[type="radio"] {
+    display: none;
+}
+
+.slider-biglietti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(0.45rem, 1.2vw, 0.75rem);
+    width: 100%;
+}
+
+.slider-biglietti .dot-a {
+    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
+    height: clamp(0.5rem, 1.2vw, 0.7rem);
+    border-radius: 999px;
+    background-color: var(--sabbia);
+    cursor: pointer;
+    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
+    animation: mostra-punto 9s infinite;
+}
+
+.slider-biglietti .dot-a:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.slider-biglietti .dot-a:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.slider-biglietti .dot-a:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+#card-a1 {
+    background-image: url(./img/biglietti-auguri/biglietto1.jpeg);
+    background-position: right;
+}
+
+#card-a2 {
+    background-image: url(./img/biglietti-auguri/biglietto6.jpeg);
+    background-position: right;
+}
+
+#card-a3 {
+    background-image: url(./img/biglietti-auguri/biglietto3.jpeg);
+    background-position: center;
+}
+
+/* PIROGRAFIA */
+
+#pirografia {
+    margin-top: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-pirografia {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 7vw, 10rem);
+    width: min(100%, 1100px);
+}
+
+.container-pirografia h1 {
+    font-size: clamp(1.7rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+}
+.container-pirografia p {
+    font-size: clamp(0.7, 5vw, 3rem);
+    color: var(--sabbia);
+    text-align: center;
+}
+
+.cont-pirografia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.immagini-pirografia {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(100%, 30rem);
+    aspect-ratio: 14 / 9;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.card-pirografia {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: mostra-torta 9s infinite;
+}
+
+.descrizione-pirografia {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.card-pirografia:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.card-pirografia:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.card-pirografia:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+.cont-pirografia > input[type="radio"] {
+    display: none;
+}
+
+.slider-pirografia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(0.45rem, 1.2vw, 0.75rem);
+    width: 100%;
+}
+
+.slider-pirografia .dot-pir {
+    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
+    height: clamp(0.5rem, 1.2vw, 0.7rem);
+    border-radius: 999px;
+    background-color: var(--sabbia);
+    cursor: pointer;
+    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
+    animation: mostra-punto 9s infinite;
+}
+
+.slider-pirografia .dot-pir:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.slider-pirografia .dot-pir:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.slider-pirografia .dot-pir:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+#card-pir1 {
+    background-image: url(./img/pirografia/pirografia1.jpeg);
+}
+
+#card-pir2 {
+    background-image: url(./img/pirografia/pirografia2.jpeg);
+}
+
+#card-pir3 {
+    background-image: url(./img/pirografia/pirografia3.png);
+}
 
 
 /* CAROSELLO */
  
-/* CARD AUTO SCROLLER */
 
 
 /* FOOTER */
@@ -898,14 +1166,16 @@ section[id] {
 
     .card-scroller .card {
         width: min(100%, clamp(16rem, 85vw, 24rem));
-        height: clamp(20rem, 85vw, 45rem);
+        height: clamp(24rem, 85vw, 48rem);
         border-radius: clamp(1rem, 2vw, 1.5rem);
         border: 0.25rem solid var(--primary);
         top: calc(var(--i) * clamp(0.8rem, 2.5vw, 2rem));
     }
 
 /* TORTE DECORATIVE */
-
+    #torte-personalizzate {
+        margin: 0;
+    }
     .container-torte {
         display: flex;
         flex-direction: column-reverse;
@@ -937,12 +1207,46 @@ section[id] {
         display: flex;
         flex-direction: column-reverse;
     }
+
+    /* BIGLIETTI D'AUGURI */
+    .container-biglietti {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1.25rem;
+        margin-right: 0;
+    }
+
+    .cont-biglietti {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .container-biglietti h1 {
+        margin-bottom: 0;
+    }
+
+    .immagini-biglietti {
+        order: 1;
+        width: min(100%, 22rem);
+    }
+
+    .slider-biglietti {
+        order: 2;
+        gap: 0.5rem;
+    }
 }
+
 
 
 /* ------- EFFETTI -------*/
 
- /* permette all'utente di spegnere gli effetti */
+
+
+ /* 
+ permette all'utente di spegnere gli effetti.
+ NB: ancora da testare nella demo meglio toglierlo se non attivo
+ */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *, *::before, *::after{

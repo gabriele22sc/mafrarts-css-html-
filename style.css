@@ -1055,7 +1055,151 @@ section[id] {
 }
 
 
- /* SEZIONE CONTATTI */
+ /*CONTATTI */
+#contatti {
+    background: linear-gradient(var(--second), var(--sabbia));
+    justify-content: center;
+    align-items: center;
+}
+.container-contatti {
+    height: clamp(20rem, 100vw, 35rem);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: var(--second);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+}
+
+.parte-social {
+    display: flex;
+    width: 50rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.parte-social h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    color: var(--primary);
+}
+.parte-social p {
+    font-size: clamp(0.5rem, 10vw, 1rem);
+    color: var(--third);
+    text-align: center;
+}
+
+.line {
+    height: 70%;
+    border: 3px solid var(--sabbia);
+    border-radius: 40px;
+}
+
+.cont-social {
+    display: flex;
+    gap: 2rem;
+}
+
+.social {
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: var(--sabbia);
+}
+
+.parte-feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 70%;
+    gap: 2rem;
+}
+.text-feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.text-feedback h3 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    color: var(--primary);
+}
+.text-feedback p {
+    font-size: clamp(0.5rem, 5vw, 1rem);
+    color: var(--third);
+}
+.cont-feedback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    min-height: 3rem;
+    box-sizing: border-box;
+    background-color: var(--primary);
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--second);
+    transition: transform 0.7s ease, color 0.7s ease-in, color 0.3s ease-out;
+}
+.cont-feedback:hover {
+    background-color: var(--second);
+    border: 3px dashed var(--primary);
+    color: var(--primary);
+}
+.social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--sabbia);
+    transition: transform 0.7s ease, color 0.7s ease-in, color 0.3s ease-out;
+    cursor: pointer;
+    color: var(--second); 
+}
+
+.social:hover {
+  transform: translateY(-2px);
+  color: var(--primary); 
+  background-color: var(--second);
+  border: 2px dashed var(--primary);
+}
+
+.tag-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  stroke: currentColor;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.tag-icon [fill="currentColor"],
+.tag-icon path:not([stroke]) {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Eccezione specifica per la nuvoletta di WhatsApp e contorno Facebook */
+/* Evita che il corpo principale di Facebook/WhatsApp prenda lo stroke */
+.tag-icon path[d*="M24 4C12.95"], 
+.tag-icon path[d*="M12 40l2.6"] {
+  stroke: none;
+  fill: currentColor;
+}
+
+
+
 
 /* FOOTER */
 

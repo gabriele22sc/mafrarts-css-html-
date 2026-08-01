@@ -1709,14 +1709,15 @@ section[id] {
  permette all'utente di spegnere gli effetti.
  NB: ancora da testare nella demo meglio toglierlo se non attivo
  */
-@media (prefers-reduced-motion: reduce){
+        /* FUNZIONA SOLO SU FIREFOX E CHROME, EDGE NON ANCORA SUPPORTATO */
+/* @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *, *::before, *::after{
     animation-duration: .001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: .001ms !important;
   }
-}
+} */
 
 
 .verticalShow {

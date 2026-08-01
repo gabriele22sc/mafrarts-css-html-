@@ -1601,6 +1601,7 @@ section[id] {
     }
 
     /* CONTATTI */
+    /* NB: correggere l'overflow del sito capite che sezione aumenta la larghezza */
     #contatti {
         padding: 1rem 0 2rem;
         min-height: auto;

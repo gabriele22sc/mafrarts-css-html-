@@ -1,13 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@100..900&display=swap');
 
 :root {
-    --primary: #18C27B;
-    --second: #F1EAD1;
-    --third: #B47541;
-    --sabbia: #A18E7C;
-    --terracotta: #C56E4E;
-    --verde-senape: #67642B;
-    --arancione: #DC7A2F;
+    /* Scala di grigio */
+    --Color1_1: #000000;
+    --Color1_2: #0D0E0B;
+    --Color1_3: #1F211C;
+    --Color1_4: #31342D;
+    --Color1_5: #40443C;
+    --Color1_6: #52564D;
+    --Color1_7: #61675B;
+    --Color1_8: #73786D;
+    --Color1_9: #858B7E;
+    --Color1_10: #9A9F93;
+    --Color1_11: #ABB1A5;
+    --Color1_12: #BFC4BA;
+    --Color1_13: #D4D7D0;
+    --Color1_14: #EBECE9;
+    --Color1_15: #FFFFFF;
+
+    --Color2_1: #1F4643;
+    --Color2_2: #2A5A56;
+    --Color2_3: #366E6A;
+    --Color2_4: #42837D;
+    --Color2_5: #509892;
+    --Color2_6: #60ADA6;
+    --Color2_7: #73C2BB;
+    --Color2_8: #8BD7CF;
+    --Color2_9: #AFE9E3;
+    --Color2_10: #E0F6F4;
+
+    --Color3_1: #6C1213;
+    --Color3_2: #89181B;
+    --Color3_3: #A71C23;
+    --Color3_4: #C6212C;
+    --Color3_5: #E42836;
+    --Color3_6: #F9454B;
+    --Color3_7: #FD706E;
+    --Color3_8: #FE938F;
+    --Color3_9: #FFB3AF;
+    --Color3_10: #FFD0CD;
+
+    --Color4_1: #F18133;
+    --Color4_2: #F58F3B;
+    --Color4_3: #F89D49;
+    --Color4_4: #FAAB58;
+    --Color4_5: #FCB968;
+    --Color4_6: #FDC67A;
+    --Color4_7: #FED38E;
+    --Color4_8: #FEE0A5;
+    --Color4_9: #FEECBE;
+    --Color4_10: #FEF7DD;
+
+    --Color5_1: #22261E;
+    --Color5_2: #2F3529;
+    --Color5_3: #3A4434;
+    --Color5_4: #46533F;
+    --Color5_5: #51634A;
+    --Color5_6: #5B7356;
+    --Color5_7: #668363;
+    --Color5_8: #709470;
+    --Color5_9: #7AA57F;
+    --Color5_10: #85B68E;
+    --Color5_11: #92C79F;
+    --Color5_12: #A0D7B2;
+    --Color5_13: #B4E6C7;
+    --Color5_14: #D0F2DE;
+    --Color5_15: #F3FCF7;
+
+
+    /* Primary */
+    --Primary1: #1BC178;
+    --Primary2: #2AC85E;
+    --Primary3: #4BCC34;
+    --Primary4: #7BCB23;
+    --Primary5: #9BC91A;
+    --Primary6: #B4C817;
+    --Primary7: #C9C718;
+    --Primary8: #DCC61D;
+    --Primary9: #EDC529;
+    --Primary10: #FAC546;
+    --Primary11: #FDC877;
+    --Primary12: #FECD97;
+    --Primary13: #FED2AF;
+    --Primary14: #FED8C1;
+    --Primary15: #FEDED0;
+
+    /* colori */
+    --Color1_1: #18C37C;
+    --Color1_2: #1CCB7F;
+    --Color1_3: #1DD585;
+    --Color1_4: #1EE08C;
+    --Color1_5: #21EA92;
+    --Color1_6: #25F499;
+    --Color1_7: #3CFEA3;
+    --Color1_8: #86FFBA;
+    --Color1_9: #B4FFD1;
+    --Color1_10: #D8FFE6;
+
+    --Color2_1: #442718;
+    --Color2_2: #5D3521;
+    --Color2_3: #794429;
+    --Color2_4: #965331;
+    --Color2_5: #B36239;
+    --Color2_6: #D17243;
+    --Color2_7: #E98757;
+    --Color2_8: #F6A27B;
+    --Color2_9: #FCC0A5;
+    --Color2_10: #FEDED0;
+
+    --Color3_1: #926C48;
+    --Color3_2: #9D7955;
+    --Color3_3: #A88863;
+    --Color3_4: #B39674;
+    --Color3_5: #BCA585;
+    --Color3_6: #C6B399;
+    --Color3_7: #CFC2AD;
+    --Color3_8: #D9D1C2;
+    --Color3_9: #E4DFD6;
+    --Color3_10: #EFEEEA;
+
+    --Color4_1: #CDBE8A;
+    --Color4_2: #CFC495;
+    --Color4_3: #D2CAA0;
+    --Color4_4: #D4D0AC;
+    --Color4_5: #D8D5B7;
+    --Color4_6: #DBDAC2;
+    --Color4_7: #DFE0CD;
+    --Color4_8: #E4E5D7;
+    --Color4_9: #E8EAE0;
+    --Color4_10: #EEEFE9;
+
+    --Color5_1: #F2CF57;
+    --Color5_2: #F0D56C;
+    --Color5_3: #EEDA80;
+    --Color5_4: #EDDF93;
+    --Color5_5: #ECE3A4;
+    --Color5_6: #ECE7B5;
+    --Color5_7: #EDEBC4;
+    --Color5_8: #EEEED1;
+    --Color5_9: #F1F2DD;
+    --Color5_10: #F4F5E8;
 }
 
 * {
@@ -30,7 +162,7 @@ body {
 }
 
 h1,h3,p {
-    font-family: 'Montserrat', serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 /*  stile per le section  */
@@ -40,10 +172,6 @@ section {
     padding: 2rem;
 }
 
-section[id] {
-/* evita che la navbar fissi la sezione */
-  scroll-margin-top: 50px; 
-}
 /*  NAVBAR  */
 
 .header {
@@ -59,34 +187,6 @@ section[id] {
 }
 
  /* EFFETTO NAVBAR */
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--sabbia);
-    backdrop-filter: blur(px);
-    z-index: -1;
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    /* flash */
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
-    transition: .5s;
-}
-
-.header:hover::after {
-    left: 100%;
-}
-
 .logo {
     background: url(./img/logo.png) no-repeat;
     background-size: contain;
@@ -100,7 +200,7 @@ section[id] {
 
 .navbar a {
     font-size: 1.15rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -124,1138 +224,7 @@ section[id] {
     display: none;
 }
 
-
-
-
-
-/*  HOME  */
-
-#home {
-    align-items: center;
-    justify-content: center;
-}
-
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-}
-
-.title h1 {
-    margin: 0;
-    display: flex;
-    gap: 0.15vh;
-    letter-spacing: 0.3vh;
-    font-family: 'Great Vibes', serif;
-    font-size: clamp(0.5rem, 9vw, 30rem);
-    color: var(--primary);
-}
-
-.letter {
-    display: inline-block;
-    animation: bounce-letter 3s ease-in-out infinite;
-    animation-delay: calc(var(--i) * 0.1s);
-    will-change: transform;
-}
-
-@keyframes bounce-letter {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-30px);
-    }
-}
-
-
-
-/*   ABOUT US   */
-
-#about {
-    background: url(./img/bg-oca.png) no-repeat center/cover;
-    background-attachment: fixed;
-    position: relative;
-    padding: 40px 20px;
-}  
-
-
-.chi-siamo {
-    font-size: clamp(0.5rem, 9vw, 30rem);
-    color: var(--second);
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    margin: 0;
-    text-shadow: 
-        -2px -2px 0 var(--primary),  
-         2px -2px 0 var(--primary),
-        -2px  2px 0 var(--primary),
-         2px  2px 0 var(--primary);
-         animation: textappear both;
-}
-
-
-.about-div {
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
-    width: clamp(280px, 40vw, 600px);
-    height: clamp(350px, 25vw, 500px);
-    border-radius: 20px;
-    background: var(--second);
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
-    
-    border: 2px solid var(--primary); 
-}
-
-.about-content h3 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-}
-
-.about-content p {
-    font-size: clamp(0.5rem, 5vw, 1.05rem);
-    line-height: 1.6;
-    color: var(--sabbia);
-}
-
-
-/*------ CREATIONS LAYOUT ------*/
-
-
-#creazioni {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-#creazioni h1 {
-    font-size: clamp(1.7rem, 7vw, 10rem);
-    font-weight: 800;
-    white-space: nowrap;
-    color: var(--primary);
-    text-align: center;
-}
-
-.sottotitolo {
-    font-size: clamp(0.7rem, 7vw, 1.5rem);
-    color: var(--sabbia);
-}
-#creazioni .container-creazioni {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
-    gap: 1.5rem;
-}
-
-.container-creazioni .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* gap: 0.5rem; */
-    height: clamp(220px, 24vw, 260px);
-    width: 100%;
-    padding: 1.5rem;
-    border: 2px solid var(--primary);
-    border-radius: 20px;
-    box-shadow: 5px 5px 0 0 var(--sabbia);
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.container-creazioni .card h3 {
-    color: var(--primary);
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    margin: 0;
-}
-.container-creazioni .card p {
-    color: var(--sabbia);
-    font-size: clamp(0.85rem, 1.5vw, 1rem);
-    line-height: 1.5;
-    margin: 0;
-}
-
-.container-creazioni .card:nth-child(3n+1) {
-    transform: rotate(-0.6deg);
-}
-
-.container-creazioni .card:nth-child(3n+2) {
-    transform: rotate(0.4deg);
-}
-
-.container-creazioni .card:nth-child(3n) {
-    transform: rotate(-0.3deg);
-}
-
-.container-creazioni .card:hover {
-    transform: translateY(-4px) rotate(0deg);
-    box-shadow: 7px 7px 0 0 var(--primary);
-}
-
-
-.icon {
-    width: clamp(0.3rem, 7vw, 2rem); 
-    height: auto;
-    color: var(--third);
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    margin-bottom: 0.1rem;
-    flex-shrink: 0;
-}
-
-.link-arrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    border-radius: 20px;
-    padding: 0.5rem 0.75rem;
-    width: fit-content;
-}
-.link-arrow:hover {
-    background: var(--primary);
-    color: var(--second);
-}
-.link-arrow span {
-    display: inline-block;
-    font-family: system-ui, -apple-system, sans-serif;
-    transition: transform 0.2s ease;
-}
-
-.link-arrow:hover span {
-    color: var(--second);
-    transform: translateX(4px);
-}
-
-
-
-
-/*------ TORTE DECORATIVE ------*/
-
-#torte-personalizzate {
-    margin-right: 10%;
-    margin-top: 20%;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-torte {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(1.5rem, 7vw, 10rem);
-    width: min(100%, 1100px);
-}
-
-.container-torte h1 {
-    font-size: clamp(1.7rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-    text-align: center;
-}
-.container-torte p {
-    font-size: clamp(0.7, 5vw, 3rem);
-    color: var(--sabbia);
-    text-align: center;
-}
-
-.cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.immagini-torte {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: min(100%, 24rem);
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
-    border-radius: 40px;
-}
-
-.card-torte {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 40px;
-    opacity: 0;
-    transform: scale(0.95);
-    animation: mostra-torta 9s infinite;
-}
-
-.descrizione-torte {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 5vw, 2.5rem);
-}
-
-.card-torte:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.card-torte:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.card-torte:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-.cont > input[type="radio"] {
-    display: none;
-}
-
-.slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(0.45rem, 1.2vw, 0.75rem);
-    width: 100%;
-}
-
-.slider .dot {
-    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
-    height: clamp(0.5rem, 1.2vw, 0.7rem);
-    border-radius: 999px;
-    background-color: var(--sabbia);
-    cursor: pointer;
-    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
-    animation: mostra-punto 9s infinite;
-}
-
-.slider .dot:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.slider .dot:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.slider .dot:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-#card-1 {
-    background-image: url(./img/torte-decorative/torta-cresima.png);
-}
-
-#card-2 {
-    background-image: url(./img/torte-decorative/torta-dottoressa.png);
-}
-
-#card-3 {
-    background-image: url(./img/torte-decorative/torta-raniero.png);
-}
-
-
-
-
-/*      BORSE,POCHETTE E ALTRO        */
-#borse {
-    margin-top: 20%;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-borse {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(1.5rem, 7vw, 10rem);
-    width: min(100%, 1100px);
-}
-
-.container-borse h1 {
-    font-size: clamp(1.7rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-    text-align: center;
-}
-.container-borse p {
-    font-size: clamp(0.7, 5vw, 3rem);
-    color: var(--sabbia);
-    text-align: center;
-}
-
-.cont-borse {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.immagini-borse {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: min(100%, 28rem);
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 40px;
-}
-
-.card-borse {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 40px;
-    opacity: 0;
-    transform: scale(0.95);
-    animation: mostra-torta 9s infinite;
-}
-
-.descrizione-borse {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 5vw, 2.5rem);
-}
-
-.card-borse:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.card-borse:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.card-borse:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-.cont-borse > input[type="radio"] {
-    display: none;
-}
-
-.slider-borse {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(0.45rem, 1.2vw, 0.75rem);
-    width: 100%;
-}
-
-.slider-borse .dot-b {
-    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
-    height: clamp(0.5rem, 1.2vw, 0.7rem);
-    border-radius: 999px;
-    background-color: var(--sabbia);
-    cursor: pointer;
-    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
-    animation: mostra-punto 9s infinite;
-}
-
-.slider-borse .dot-b:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.slider-borse .dot-b:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.slider-borse .dot-b:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-#card-b1 {
-    background-image: url(./img/borse-pochette-altro/borsa1.jpeg);
-}
-
-#card-b2 {
-    background-image: url(./img/borse-pochette-altro/borsa2.jpeg);
-}
-
-#card-b3 {
-    background-image: url(./img/borse-pochette-altro/pochette5.jpeg);
-}
-
-
-
-/*------ CAPI PERSONALIZZATI ------*/
-
-#vestiti-ricamati {
-    margin-top: 20%;
-}
-
-.product1 {
-    width: min(100%, 1200px);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
-    /* gap: clamp(1.5rem, 4vw, 3rem);
-    padding: clamp(1rem, 3vw, 2rem); */
-}
-.product1 h1 {
-    text-align: center;
-    font-size: clamp(1.7rem, 4vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-}
-.product1 h3 {
-    text-align: center;
-    font-size: clamp(1.1rem, 2.4vw, 2rem);
-    font-weight: 800;
-    color: var(--primary);
-    margin-top: 105%;
-}
-.product1 p {
-    text-align: center;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
-    color: var(--sabbia);
-    line-height: 1.6;
-    margin-top: 0;
-}
-.testo-card {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(0.75rem, 2vw, 1.25rem);
-}
-.product1 .card-scroller {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: min(100%, clamp(18rem, 70vw, 30rem));
-    margin: 0 auto;
-    perspective: 1200px;
-    view-timeline-name: --cards;
-    view-timeline-axis: block;
-}
-
-.card-scroller .card {
-    width: min(100%, clamp(16rem, 66vw, 24rem));
-    height: clamp(24rem, 80vw, 36rem);
-    border-radius: clamp(1rem, 2vw, 1.5rem);
-    border: 0.25rem solid var(--primary);
-    background-color: var(--second);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: sticky;
-    overflow: hidden;
-    top: calc(var(--i) * clamp(0.8rem, 2.5vw, 2.5rem));
-    animation: stack 1s linear both;
-    animation-timeline: --cards;
-    animation-range: entry 0% exit 50%;
-}
-.card-scroller .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card-scroller #card1 {
-    --i: 1;
-}
-.card-scroller #card2 {
-    --i: 2;
-}
-.card-scroller #card3 {
-    --i: 3;
-}
-.card-scroller #card4 {
-    --i: 4;
-}
-@keyframes stack {
-    0% {
-        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
-    }
-    35% {
-        transform: translateY(100px) translateZ(-200px) rotateX(8deg) scale(0.92);
-    }
-    70% {
-        transform: translateY(20px) translateZ(-120px) rotateX(2deg) scale(0.95);
-    }
-    80% {
-        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
-    }
-}
-
-
-/* BIGLIETTO D'AUGURI */
-
-
-#biglietto-auguri {
-    margin-top: 20%;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-biglietti {
-    margin-right: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.container-biglietti h1 {
-    font-size: clamp(1.7rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-    text-align: center;
-}
-.container-biglietti p {
-    font-size: clamp(0.7, 5vw, 3rem);
-    color: var(--sabbia);
-    text-align: center;
-}
-
-.cont-biglietti {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.immagini-biglietti {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: min(100%, 28rem);
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 40px;
-}
-
-.card-biglietti {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 40px;
-    opacity: 0;
-    transform: scale(0.95);
-    animation: mostra-torta 9s infinite;
-}
-
-.descrizione-biglietti {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 5vw, 2.5rem);
-}
-
-.card-biglietti:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.card-biglietti:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.card-biglietti:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-.cont-biglietti > input[type="radio"] {
-    display: none;
-}
-
-.slider-biglietti {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(0.45rem, 1.2vw, 0.75rem);
-    width: 100%;
-}
-
-.slider-biglietti .dot-a {
-    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
-    height: clamp(0.5rem, 1.2vw, 0.7rem);
-    border-radius: 999px;
-    background-color: var(--sabbia);
-    cursor: pointer;
-    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
-    animation: mostra-punto 9s infinite;
-}
-
-.slider-biglietti .dot-a:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.slider-biglietti .dot-a:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.slider-biglietti .dot-a:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-#card-a1 {
-    background-image: url(./img/biglietti-auguri/biglietto1.jpeg);
-    background-position: right;
-}
-
-#card-a2 {
-    background-image: url(./img/biglietti-auguri/biglietto6.jpeg);
-    background-position: right;
-}
-
-#card-a3 {
-    background-image: url(./img/biglietti-auguri/biglietto3.jpeg);
-    background-position: center;
-}
-
-/* PIROGRAFIA */
-
-#pirografia {
-    margin-top: 20%;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-pirografia {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(1.5rem, 7vw, 10rem);
-    width: min(100%, 1100px);
-}
-
-.container-pirografia h1 {
-    font-size: clamp(1.7rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--primary);
-    text-align: center;
-}
-.container-pirografia p {
-    font-size: clamp(0.7, 5vw, 3rem);
-    color: var(--sabbia);
-    text-align: center;
-}
-
-.cont-pirografia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.immagini-pirografia {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: min(100%, 30rem);
-    aspect-ratio: 14 / 9;
-    overflow: hidden;
-    border-radius: 40px;
-}
-
-.card-pirografia {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 40px;
-    opacity: 0;
-    transform: scale(0.95);
-    animation: mostra-torta 9s infinite;
-}
-
-.descrizione-pirografia {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 5vw, 2.5rem);
-}
-
-.card-pirografia:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.card-pirografia:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.card-pirografia:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-.cont-pirografia > input[type="radio"] {
-    display: none;
-}
-
-.slider-pirografia {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(0.45rem, 1.2vw, 0.75rem);
-    width: 100%;
-}
-
-.slider-pirografia .dot-pir {
-    flex: 0 0 clamp(0.7rem, 1.2vw, 1rem);
-    height: clamp(0.5rem, 1.2vw, 0.7rem);
-    border-radius: 999px;
-    background-color: var(--sabbia);
-    cursor: pointer;
-    transition: transform 2s ease, background-color 2s ease, box-shadow 2s ease;
-    animation: mostra-punto 9s infinite;
-}
-
-.slider-pirografia .dot-pir:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.slider-pirografia .dot-pir:nth-of-type(2) {
-    animation-delay: 3s;
-}
-
-.slider-pirografia .dot-pir:nth-of-type(3) {
-    animation-delay: 6s;
-}
-
-#card-pir1 {
-    background-image: url(./img/pirografia/pirografia1.jpeg);
-}
-
-#card-pir2 {
-    background-image: url(./img/pirografia/pirografia2.jpeg);
-}
-
-#card-pir3 {
-    background-image: url(./img/pirografia/pirografia3.png);
-}
-
-/* ALTRO */
-
-#altro {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#altro h1{
-    text-align: center;
-    font-size: clamp(2rem, 10rem, 4rem);
-    color: var(--primary);
-}
-#altro p{
-    text-align: center;
-    font-size: clamp(0.7rem, 10rem, 1.2rem);
-    color: var(--sabbia);
-}
-/* CAROSELLO */
-.carosello {
-    margin-top: 5%;
-    width: 90%;
-    overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
-}
-.carosello:hover .item img {
-    filter: grayscale(0.8);
-}
-.item:hover {
-    transform: scale(1.05);
-}
-.item:hover img {
-    filter: grayscale(0) !important;
-    transform: scale(1.06);
-}
-
-.item:hover .item-label {
-    transform: scale(1.2);
-    color: var(--primary);
-}
-
-.carosello:hover .track {
-    animation-play-state: paused;
-}
-.track {
-    padding: 2rem;
-    display: flex;
-    width: max-content;
-    will-change: transform;
-    animation: scroll 10s linear infinite;
-}
-@keyframes scroll {
-    to {
-        transform:translateX(-50%);
-    }
-}
-.item {
-    position: relative;
-    background-color: var(--sabbia);
-    width: 240px;
-    height: 200px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    margin-right: 15px;
-    overflow: hidden;
-    transition: 0.7s ease;
-}
-.item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s filter 0.4s;
-}
-.item-label {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.7rem 0.8rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-align: center;
-    pointer-events: none;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-
- /*CONTATTI */
-#contatti {
-    background: linear-gradient(var(--second), var(--sabbia));
-    justify-content: center;
-    align-items: center;
-}
-.container-contatti {
-    height: clamp(20rem, 100vw, 35rem);
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    background-color: var(--second);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    gap: 2rem;
-}
-
-.parte-social {
-    display: flex;
-    width: 50rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-}
-
-.parte-social h1 {
-    font-size: clamp(2rem, 10vw, 3rem);
-    color: var(--primary);
-}
-.parte-social p {
-    font-size: clamp(0.5rem, 10vw, 1rem);
-    color: var(--third);
-    text-align: center;
-}
-
-.line {
-    height: 70%;
-    border: 3px solid var(--sabbia);
-    border-radius: 40px;
-}
-
-.cont-social {
-    display: flex;
-    gap: 2rem;
-}
-
-.social {
-    height: 100px;
-    width: 100px;
-    border-radius: 20px;
-    background-color: var(--sabbia);
-}
-
-.parte-feedback {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-    height: 70%;
-    gap: 2rem;
-}
-.text-feedback {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.text-feedback h3 {
-    font-size: clamp(1rem, 5vw, 2rem);
-    color: var(--primary);
-}
-.text-feedback p {
-    font-size: clamp(0.5rem, 5vw, 1rem);
-    color: var(--third);
-}
-.cont-feedback {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    min-height: 3rem;
-    box-sizing: border-box;
-    background-color: var(--primary);
-    border-radius: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--second);
-    transition: transform 0.7s ease, color 0.7s ease-in, color 0.3s ease-out;
-}
-.cont-feedback:hover {
-    background-color: var(--second);
-    border: 3px dashed var(--primary);
-    color: var(--primary);
-}
-.social {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 100px;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--sabbia);
-    transition: transform 0.7s ease, color 0.7s ease-in, color 0.3s ease-out;
-    cursor: pointer;
-    color: var(--second); 
-}
-
-.social:hover {
-  transform: translateY(-2px);
-  color: var(--primary); 
-  background-color: var(--second);
-  border: 2px dashed var(--primary);
-}
-
-.tag-icon {
-  width: 24px;
-  height: 24px;
-  display: block;
-  stroke: currentColor;
-  stroke-width: 3px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
-
-.tag-icon [fill="currentColor"],
-.tag-icon path:not([stroke]) {
-  fill: currentColor;
-  stroke: none;
-}
-
-/* Eccezione specifica per la nuvoletta di WhatsApp e contorno Facebook */
-/* Evita che il corpo principale di Facebook/WhatsApp prenda lo stroke */
-.tag-icon path[d*="M24 4C12.95"], 
-.tag-icon path[d*="M12 40l2.6"] {
-  stroke: none;
-  fill: currentColor;
-}
-
-
-
-/* FOOTER */
-.site-footer {
-    width: 100%;
-    padding: 2rem 1.5rem 2.5rem;
-    background-color: var(--sabbia);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-container {
-    width: min(100%, 900px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-.logo-footer {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1rem, 5vw, 1.3rem);
-    text-decoration: none;
-    color: var(--primary);
-    transition: color 0.4s ease;
-}
-.footer-container p {
-    font-size: clamp(0.85rem, 2.2vw, 1rem);
-    color: var(--second);
-    line-height: 1.6;
-    max-width: 38rem;
-}
-
-.footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: clamp(1rem, 3vw, 3rem);
-}
-.footer-nav a {
-    text-decoration: none;
-    color: var(--primary);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    transition: color 0.4s ease;
-}
-
-.footer-nav a:hover, .logo-footer:hover {
-    color: var(--second);
-}
-
-
-
 /*      IPAD        */
-
 @media (max-width: 992px) {
     .header {
         padding: 1.3rem 5%;
@@ -1274,9 +243,6 @@ section[id] {
     #creazioni .container-creazioni {
         grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
-
-    /*------ RICAMI ------*/
-
 
     /*------ TORTE PERSONALIZZATE ------*/
     .descrizione-torte {
@@ -1336,367 +302,6 @@ section[id] {
         transform: translateY(0);
         opacity: 1;
         transition-delay: calc(0.15s * var(--i));
-    }
-
-
-/*----- ABOUT US -----*/
-
-    #about {
-        background: url(./img/oca-bg-mobile.png) no-repeat;
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 2rem 1rem 3rem;
-    }
-
-    .chi-siamo {
-        position: static;
-        font-family: 'Montserrat', serif;
-        font-size: clamp(2.2rem, 10vw, 12rem);
-        color: var(--second);
-        text-align: center;
-        margin-top: 30%;
-        margin-bottom: 1.5rem;
-        text-shadow: 
-        -2px -2px 0 var(--primary),  
-         2px -2px 0 var(--primary),
-        -2px  2px 0 var(--primary),
-         2px  2px 0 var(--primary);
-         animation: textappear both;
-    }
-
-    .about-div {
-        position: static;
-        width: min(100%, 520px);
-        height: auto;
-        margin-top: 20%;
-        padding: 1.5rem;
-        background: rgba(241, 234, 209, 0.95);
-        border: 2px solid var(--primary);
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-
-/*----- CREAZIONI -----*/
-    #creazioni {
-        padding: 1.2rem;
-    }
-
-    #creazioni .container-creazioni {
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
-
-    #creazioni .container-creazioni .card {
-        height: clamp(220px, 42vw, 320px);
-        width: min(100%, clamp(240px, 80vw, 360px));
-        justify-self: center;
-    }
-    #creazioni h1 {
-        margin-top: 20%;
-    }
-
-
-/*----- VESTITI RICAMATI A MANO -----*/
-
-    .product1 {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: clamp(1rem, 3vw, 1.5rem);
-        padding: clamp(1rem, 2vw, 1.5rem);
-    }
-    .product1 h1 {
-        margin-top: 0;
-        text-align: center;
-        font-size: clamp(2rem, 7vw, 3.5rem);
-        font-weight: 800;
-        color: var(--primary);
-    }
-    .product1 h3 {
-        margin-top: 0;
-        text-align: center;
-        font-size: clamp(1rem, 4vw, 1.6rem);
-        font-weight: 800;
-        color: var(--primary);
-    }
-    .product1 p {
-        margin-top: 0;
-        text-align: center;
-        font-size: clamp(0.9rem, 3.2vw, 1rem);
-        color: var(--sabbia);
-        line-height: 1.6;
-    }
-
-    .testo-card {
-        margin-top: 20%;
-        width: min(100%, 32rem);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .product1 .card-scroller {
-        width: min(100%, clamp(18rem, 90vw, 26rem));
-        margin: 0;
-    }
-
-    .card-scroller .card {
-        width: min(100%, clamp(16rem, 85vw, 24rem));
-        height: clamp(24rem, 85vw, 48rem);
-        border-radius: clamp(1rem, 2vw, 1.5rem);
-        border: 0.25rem solid var(--primary);
-        top: calc(var(--i) * clamp(0.8rem, 2.5vw, 2rem));
-    }
-
-/* TORTE DECORATIVE */
-    #torte-personalizzate {
-        margin: 0;
-    }
-    .container-torte {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 1.25rem;
-    }
-
-    .cont {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .container-torte h1 {
-        margin-bottom: 0;
-    }
-
-    .immagini {
-        order: 1;
-        width: min(100%, 22rem);
-    }
-
-    .slider {
-        order: 2;
-        gap: 0.5rem;
-    }
-
-    /* BORSE, POCHETTE E ALTRO */
-    .container-borse{
-        margin: 0;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    /* BIGLIETTI D'AUGURI */
-    .container-biglietti {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 1.25rem;
-        margin-right: 0;
-    }
-
-    .cont-biglietti {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .container-biglietti h1 {
-        margin-bottom: 0;
-    }
-
-    .immagini-biglietti {
-        order: 1;
-        width: min(100%, 22rem);
-    }
-
-    .slider-biglietti {
-        order: 2;
-        gap: 0.5rem;
-    }
-
-    /* PIROGRAFIA */
-    #pirografia {
-        margin-top: 0;
-        padding: 1rem 0 2rem;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .container-pirografia {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-        width: 100%;
-    }
-    
-    .descrizione-pirografia {
-        order: 1;
-        gap: 0.75rem;
-        width: min(100%, 26rem);
-    }
-
-    .cont-pirografia {
-        order: 2;
-        width: 100%;
-        gap: 0.75rem;
-    }
-
-    .immagini-pirografia {
-        order: 3;
-        width: min(100%, 22rem);
-    }
-
-    .slider-pirografia {
-        order: 4;
-        gap: 0.5rem;
-    }
-
-    .container-pirografia h1 {
-        margin-bottom: 0;
-    }
-
-    /* ALTRO */
-
-    #altro h1 {
-        font-size: clamp(2rem, 5vw, 4rem);
-    }
-    #altro p {
-        margin-top: 4%;
-        font-size: clamp(0.9rem, 3.2vw, 1rem);
-    }
-    .carosello {
-        margin-top: 10%;
-        width: 95%;
-    }
-
-    .item {
-        width: 180px;
-        height: 150px;
-        border-radius: 12px;
-        margin-right: 12px;
-    }
-
-    /* FOOTER */
-    .site-footer {
-        padding: 1.5rem 1rem 2rem;
-    }
-
-    .footer-container {
-        gap: 0.75rem;
-    }
-
-    .footer-nav {
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .footer-container p {
-        font-size: 0.9rem;
-    }
-
-    /* CONTATTI */
-    /* NB: correggere l'overflow del sito capite che sezione aumenta la larghezza */
-    #contatti {
-        padding: 1rem 0 2rem;
-        min-height: auto;
-    }
-
-    .container-contatti {
-        width: min(100%, 100%);
-        height: clamp(40rem, 80vw, 50rem);
-        flex-direction: column;
-        justify-content: center;
-        gap: 5rem;
-        padding: 1.25rem 1rem 1.5rem;
-        border-radius: 24px;
-        box-sizing: border-box;
-    }
-
-    .parte-social,
-    .parte-feedback {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        gap: 1.25rem;
-        align-items: center;
-        text-align: center;
-    }
-
-    .social {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        width: 100px;
-        border: 2px dashed var(--primary);
-        border-radius: 20px;
-        background-color: var(--second);
-        transition: transform 0.7s ease, color 0.7s ease-in, color 0.3s ease-out;
-        cursor: pointer;
-        color: var(--primary);
-    }
-
-    .parte-social h1 {
-        font-size: clamp(1.6rem, 6vw, 2.2rem);
-    }
-
-    .parte-social p {
-        font-size: clamp(0.95rem, 3vw, 1rem);
-        line-height: 1.5;
-    }
-
-    .line {
-        display: none;
-    }
-
-    .cont-social {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .social {
-        width: 72px;
-        height: 72px;
-        border-radius: 16px;
-    }
-
-    .text-feedback {
-        gap: 0.75rem;
-        align-items: center;
-        text-align: center;
-    }
-
-    .text-feedback h3 {
-        font-size: clamp(1.1rem, 4vw, 1.4rem);
-    }
-
-    .text-feedback p {
-        font-size: clamp(0.9rem, 3vw, 1rem);
-    }
-
-    .cont-feedback {
-        width: 100%;
-        max-width: 16rem;
-        min-height: 3rem;
-        padding: 0 1rem;
-        text-align: center;
-    }
-
-
-    /* FOOTER */
-    .footer-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
     }
 }
 

@@ -2,70 +2,70 @@
 
 :root {
     /* Scala di grigio */
-    --Color1_1: #000000;
-    --Color1_2: #0D0E0B;
-    --Color1_3: #1F211C;
-    --Color1_4: #31342D;
-    --Color1_5: #40443C;
-    --Color1_6: #52564D;
-    --Color1_7: #61675B;
-    --Color1_8: #73786D;
-    --Color1_9: #858B7E;
-    --Color1_10: #9A9F93;
-    --Color1_11: #ABB1A5;
-    --Color1_12: #BFC4BA;
-    --Color1_13: #D4D7D0;
-    --Color1_14: #EBECE9;
-    --Color1_15: #FFFFFF;
+    --grey-1: #000000;
+    --grey-2: #0D0E0B;
+    --grey-3: #1F211C;
+    --grey-4: #31342D;
+    --grey-5: #40443C;
+    --grey-6: #52564D;
+    --grey-7: #61675B;
+    --grey-8: #73786D;
+    --grey-9: #858B7E;
+    --grey-10: #9A9F93;
+    --grey-11: #ABB1A5;
+    --grey-12: #BFC4BA;
+    --grey-13: #D4D7D0;
+    --grey-14: #EBECE9;
+    --grey-15: #FFFFFF;
 
-    --Color2_1: #1F4643;
-    --Color2_2: #2A5A56;
-    --Color2_3: #366E6A;
-    --Color2_4: #42837D;
-    --Color2_5: #509892;
-    --Color2_6: #60ADA6;
-    --Color2_7: #73C2BB;
-    --Color2_8: #8BD7CF;
-    --Color2_9: #AFE9E3;
-    --Color2_10: #E0F6F4;
+    --verde-acqua1: #1F4643;
+    --verde-acqua2: #2A5A56;
+    --verde-acqua3: #366E6A;
+    --verde-acqua4: #42837D;
+    --verde-acqua5: #509892;
+    --verde-acqua6: #60ADA6;
+    --verde-acqua7: #73C2BB;
+    --verde-acqua8: #8BD7CF;
+    --verde-acqua9: #AFE9E3;
+    --verde-acqua10: #E0F6F4;
 
-    --Color3_1: #6C1213;
-    --Color3_2: #89181B;
-    --Color3_3: #A71C23;
-    --Color3_4: #C6212C;
-    --Color3_5: #E42836;
-    --Color3_6: #F9454B;
-    --Color3_7: #FD706E;
-    --Color3_8: #FE938F;
-    --Color3_9: #FFB3AF;
-    --Color3_10: #FFD0CD;
+    --rosso-1: #6C1213;
+    --rosso-2: #89181B;
+    --rosso-3: #A71C23;
+    --rosso-4: #C6212C;
+    --rosso-5: #E42836;
+    --rosso-6: #F9454B;
+    --rosso-7: #FD706E;
+    --rosso-8: #FE938F;
+    --rosso-9: #FFB3AF;
+    --rosso-10: #FFD0CD;
 
-    --Color4_1: #F18133;
-    --Color4_2: #F58F3B;
-    --Color4_3: #F89D49;
-    --Color4_4: #FAAB58;
-    --Color4_5: #FCB968;
-    --Color4_6: #FDC67A;
-    --Color4_7: #FED38E;
-    --Color4_8: #FEE0A5;
-    --Color4_9: #FEECBE;
-    --Color4_10: #FEF7DD;
+    --arancione-1: #F18133;
+    --arancione-2: #F58F3B;
+    --arancione-3: #F89D49;
+    --arancione-4: #FAAB58;
+    --arancione-5: #FCB968;
+    --arancione-6: #FDC67A;
+    --arancione-7: #FED38E;
+    --arancione-8: #FEE0A5;
+    --arancione-9: #FEECBE;
+    --arancione-10: #FEF7DD;
 
-    --Color5_1: #22261E;
-    --Color5_2: #2F3529;
-    --Color5_3: #3A4434;
-    --Color5_4: #46533F;
-    --Color5_5: #51634A;
-    --Color5_6: #5B7356;
-    --Color5_7: #668363;
-    --Color5_8: #709470;
-    --Color5_9: #7AA57F;
-    --Color5_10: #85B68E;
-    --Color5_11: #92C79F;
-    --Color5_12: #A0D7B2;
-    --Color5_13: #B4E6C7;
-    --Color5_14: #D0F2DE;
-    --Color5_15: #F3FCF7;
+    --verde-sfumato-1: #22261E;
+    --verde-sfumato-2: #2F3529;
+    --verde-sfumato-3: #3A4434;
+    --verde-sfumato-4: #46533F;
+    --verde-sfumato-5: #51634A;
+    --verde-sfumato-6: #5B7356;
+    --verde-sfumato-7: #668363;
+    --verde-sfumato-8: #709470;
+    --verde-sfumato-9: #7AA57F;
+    --verde-sfumato-10: #85B68E;
+    --verde-sfumato-11: #92C79F;
+    --verde-sfumato-12: #A0D7B2;
+    --verde-sfumato-13: #B4E6C7;
+    --verde-sfumato-14: #D0F2DE;
+    --verde-sfumato-15: #F3FCF7;
 
 
     /* Primary */
@@ -86,60 +86,60 @@
     --Primary15: #FEDED0;
 
     /* colori */
-    --Color1_1: #18C37C;
-    --Color1_2: #1CCB7F;
-    --Color1_3: #1DD585;
-    --Color1_4: #1EE08C;
-    --Color1_5: #21EA92;
-    --Color1_6: #25F499;
-    --Color1_7: #3CFEA3;
-    --Color1_8: #86FFBA;
-    --Color1_9: #B4FFD1;
-    --Color1_10: #D8FFE6;
+    --green-primary-1: #18C37C;
+    --green-primary-2: #1CCB7F;
+    --green-primary-3: #1DD585;
+    --green-primary-4: #1EE08C;
+    --green-primary-5: #21EA92;
+    --green-primary-6: #25F499;
+    --green-primary-7: #3CFEA3;
+    --green-primary-8: #86FFBA;
+    --green-primary-9: #B4FFD1;
+    --green-primary-10: #D8FFE6;
 
-    --Color2_1: #442718;
-    --Color2_2: #5D3521;
-    --Color2_3: #794429;
-    --Color2_4: #965331;
-    --Color2_5: #B36239;
-    --Color2_6: #D17243;
-    --Color2_7: #E98757;
-    --Color2_8: #F6A27B;
-    --Color2_9: #FCC0A5;
-    --Color2_10: #FEDED0;
+    --marrone-1: #442718;
+    --marrone-2: #5D3521;
+    --marrone-3: #794429;
+    --marrone-4: #965331;
+    --marrone-5: #B36239;
+    --marrone-6: #D17243;
+    --marrone-7: #E98757;
+    --marrone-8: #F6A27B;
+    --marrone-9: #FCC0A5;
+    --marrone-10: #FEDED0;
 
-    --Color3_1: #926C48;
-    --Color3_2: #9D7955;
-    --Color3_3: #A88863;
-    --Color3_4: #B39674;
-    --Color3_5: #BCA585;
-    --Color3_6: #C6B399;
-    --Color3_7: #CFC2AD;
-    --Color3_8: #D9D1C2;
-    --Color3_9: #E4DFD6;
-    --Color3_10: #EFEEEA;
+    --marroncino-1: #926C48;
+    --marroncino-2: #9D7955;
+    --marroncino-3: #A88863;
+    --marroncino-4: #B39674;
+    --marroncino-5: #BCA585;
+    --marroncino-6: #C6B399;
+    --marroncino-7: #CFC2AD;
+    --marroncino-8: #D9D1C2;
+    --marroncino-9: #E4DFD6;
+    --marroncino-10: #EFEEEA;
 
-    --Color4_1: #CDBE8A;
-    --Color4_2: #CFC495;
-    --Color4_3: #D2CAA0;
-    --Color4_4: #D4D0AC;
-    --Color4_5: #D8D5B7;
-    --Color4_6: #DBDAC2;
-    --Color4_7: #DFE0CD;
-    --Color4_8: #E4E5D7;
-    --Color4_9: #E8EAE0;
-    --Color4_10: #EEEFE9;
+    --beige-1: #CDBE8A;
+    --beige-2: #CFC495;
+    --beige-3: #D2CAA0;
+    --beige-4: #D4D0AC;
+    --beige-5: #D8D5B7;
+    --beige-6: #DBDAC2;
+    --beige-7: #DFE0CD;
+    --beige-8: #E4E5D7;
+    --beige-9: #E8EAE0;
+    --beige-10: #EEEFE9;
 
-    --Color5_1: #F2CF57;
-    --Color5_2: #F0D56C;
-    --Color5_3: #EEDA80;
-    --Color5_4: #EDDF93;
-    --Color5_5: #ECE3A4;
-    --Color5_6: #ECE7B5;
-    --Color5_7: #EDEBC4;
-    --Color5_8: #EEEED1;
-    --Color5_9: #F1F2DD;
-    --Color5_10: #F4F5E8;
+    --giallo-1: #F2CF57;
+    --giallo-2: #F0D56C;
+    --giallo-3: #EEDA80;
+    --giallo-4: #EDDF93;
+    --giallo-5: #ECE3A4;
+    --giallo-6: #ECE7B5;
+    --giallo-7: #EDEBC4;
+    --giallo-8: #EEEED1;
+    --giallo-9: #F1F2DD;
+    --giallo-10: #F4F5E8;
 }
 
 * {
@@ -199,16 +199,17 @@ section {
 }
 
 .navbar a {
+    display: block;
     font-size: 1.15rem;
     font-family: 'Outfit', sans-serif;
-    color: #fff;
+    color: var(--marrone-1);
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
 }
 
 .navbar a:hover {
-    color: var(--primary);
+    color: var(--Primary9);
 }
 
 #check {
@@ -219,9 +220,9 @@ section {
     position: absolute;
     right: 5%;
     font-size: 2.8rem;
-    color: #fff;
+    color: var(--grey-9);
     cursor: pointer;
-    display: none;
+    /* display: none; */
 }
 
 /*      IPAD        */

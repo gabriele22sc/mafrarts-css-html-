@@ -201,15 +201,25 @@ section {
 .navbar a {
     display: block;
     font-size: 1.15rem;
+    margin: 1.5rem 0;
     font-family: 'Outfit', sans-serif;
+    text-align: center;
+    transform: translateY(-50px);
     color: var(--marrone-1);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 2.5rem;
+    opacity: 0;
+    transition: 0.3s ease;
 }
 
 .navbar a:hover {
     color: var(--Primary9);
+}
+
+#check:checked~.navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.15s * var(--i));
 }
 
 #check {
@@ -217,12 +227,54 @@ section {
 }
 
 .icons {
+    display: inline-flex;
     position: absolute;
     right: 5%;
     font-size: 2.8rem;
     color: var(--grey-9);
     cursor: pointer;
-    /* display: none; */
+}
+
+.icons #close {
+    display: none;
+}
+
+#check:checked~.icons #menu {
+    display: none;
+}
+
+#check:checked~.icons #close {
+    display: block;
+}
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: var(--second);
+    backdrop-filter: blur(-50px);
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+#check:checked~.navbar {
+    height: 20rem;
+    align-items: start;
+}
+.line {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.facebook, .instagram, .whatsapp {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: var(--Primary9);
 }
 
 /*      IPAD        */
@@ -243,11 +295,6 @@ section {
     }
     #creazioni .container-creazioni {
         grid-template-columns: repeat(2, minmax(220px, 1fr));
-    }
-
-    /*------ TORTE PERSONALIZZATE ------*/
-    .descrizione-torte {
-        gap: clamp(1rem, 5vw, 2rem);
     }
 
 }
@@ -309,23 +356,6 @@ section {
 
 
 /* ------- EFFETTI -------*/
-
-
-
- /* 
- permette all'utente di spegnere gli effetti.
- NB: ancora da testare nella demo meglio toglierlo se non attivo
- */
-        /* FUNZIONA SOLO SU FIREFOX E CHROME, EDGE NON ANCORA SUPPORTATO */
-/* @media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior: auto; }
-  *, *::before, *::after{
-    animation-duration: .001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .001ms !important;
-  }
-} */
-
 
 .verticalShow {
     animation: text-appear both;
